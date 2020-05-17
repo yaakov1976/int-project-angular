@@ -1,0 +1,15 @@
+h1{
+    text-align: center;
+}
+#logout{
+    background-color: red;
+    color: white;
+    margin-left: 550px;
+}
+#mainDiv{
+    margin-left: 490px;
+}
+#toOrder{
+    background-color: blue;
+    color: aliceblue; 
+}

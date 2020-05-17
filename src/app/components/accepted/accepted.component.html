@@ -1,0 +1,26 @@
+<h2>YOUR ODER HAS BEEN ACCEPTED</h2>
+
+<h2>Details : <button id="details" (click)="details()">SHOW / DONT SHOW</button>
+    <button id="logout" (click)="logout()">LOGOUT </button>
+</h2> 
+
+<div *ngIf="showDetails">
+    <p>name :  {{name}}</p>
+    <p>your email : {{email}} </p>
+    <h4>Type Of Meat : {{typeOfMeat}}</h4>
+    <h4>Vegetables :</h4>
+    <span *ngIf="tomato">tomato, </span>
+    <span *ngIf="theLettuce">lettuce, </span>
+    <span *ngIf="thePickles">pickles, </span>
+    <span *ngIf="theOnion">onion</span>
+    <h4>Sauces :</h4>
+    <span *ngIf="ketchup">ketchup, </span>
+    <span *ngIf="mustard">mustard, </span>
+    <span *ngIf="ThousandIsland">Thousand Island, </span>
+    <span *ngIf="sweetChilli">sweet Chilli</span>
+    <h4>Type Of Extras : {{typeOfExtras}}</h4>
+    <h3> ADDRESS TO DElIVER :</h3>
+    <p>city : {{address.city}} </p>
+    <p>street : {{address.street}} </p>
+    <p>houseNumber : {{address.houseNumber}}</p>
+</div>

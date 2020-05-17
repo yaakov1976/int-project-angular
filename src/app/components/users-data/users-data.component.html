@@ -1,0 +1,36 @@
+<h1> WELCOME {{newName}} </h1>
+<br>
+<button id="logout" (click)="logout()">LOGOUT </button> 
+<div id="mainDiv">
+    <h3>please enter the address for the oder :</h3>
+    <label for="cites">choose name of city from the list</label><br>
+<select name="my-select" [(ngModel)]="mySelect" (change)="selectChange()">
+    <option [value]="city.name" *ngFor="let city of namesOfCites">
+        {{city.name}}
+    </option>
+</select>
+<div> Selected City: {{selectedCity}}</div>
+<br>
+<div *ngIf="ifYouSelectedCity">
+    <label for="Streets">choose street :</label><br>
+    <select name="my-select-street" [(ngModel)]="mySelectStreet" (change)="selectChangeStreet()">
+        <option [value]="street.id" *ngFor="let street of newStreets">
+           {{street.street_name}}
+        </option>
+    </select>
+    <br>
+    selected street : {{selectedStreet}}
+</div>
+<br>
+<form *ngIf="ifYouSelectedStreet">
+    <label>number of the house :</label>
+    <br>
+    <input type="number" placeholder="house number" #houseNumber>
+    <br>
+    PRESS ENTER TO CONTINUE 
+    <br><br>
+    <button id="toOrder" *ngIf="houseNumber.value" (click)="saveAddressOfOder(houseNumber.value)" 
+        [routerLink]="['/order'] " >continue to order</button>
+</form>
+
+</div>

@@ -1,0 +1,18 @@
+button {
+    border: 0;
+    padding: 0;
+    background-color: #fff0;
+    margin-left: 250px;
+}
+h1{
+    text-align: center;
+    color: white;
+}
+div{
+    background-image: url(../../../assets/humboger.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 500px;
+    margin-left: 300px;
+}

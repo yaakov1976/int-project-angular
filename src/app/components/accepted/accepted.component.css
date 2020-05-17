@@ -1,0 +1,21 @@
+h1,h2{
+    text-align: center;
+}
+div{
+    background-color: aqua;
+    margin-left: 450px;
+    padding-left: 20px;
+    padding-top: 5px;
+    width: 320px;
+    height: 480px;
+}
+button{
+    margin: 10px;
+    color: white;
+}
+#logout{
+    background-color: red;
+}
+#details{
+    background-color: green;
+}

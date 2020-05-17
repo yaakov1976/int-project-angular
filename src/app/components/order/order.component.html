@@ -1,0 +1,99 @@
+
+<h1>
+   what is your order ?
+</h1>
+<div id="divMeat" >
+    <h2>
+        type of meat
+    </h2>
+    <form [formGroup]="form1" >
+        <div >
+            <label> choose type of meat : </label>
+            <label>
+                <input type="radio" formControlName="meat" value="lamb hamburger" > Lamb hamburger
+            </label>
+            <label>
+                <input type="radio"  formControlName="meat" value="beef hamburger" > Regular hamburger
+            </label>
+            <label>
+                <input type="radio"  formControlName="meat" value="schnitzel" > Schnitzel
+            </label>
+            <label>
+                <input type="radio" formControlName="meat" value="vegan"> Vegan
+            </label>
+        </div>
+    </form>
+</div>
+
+<div id="divVegetables" >
+    <h2>
+        type of vegetables
+    </h2>
+    <form >
+        <div >
+            <label> choose type of vegetables : </label>
+            <label>
+                <input type="checkbox" [formControl]="tomato"> tomato
+                
+            </label>
+            <label>
+                <input type="checkbox" [formControl]="lettuce"> lettuce
+            </label>
+            <label>
+                <input type="checkbox" [formControl]="pickles"> pickles
+            </label>
+            <label>
+                <input type="checkbox" [formControl]="Onion"> Onion
+            </label>
+        </div>
+    </form>
+</div>
+
+<div id="divSauces" >
+    <h2>
+        type of Sauces
+    </h2>
+    <form >
+        <div >
+            <label> choose type of Sauces : </label>
+            <label>
+                <input type="checkbox" [formControl]="ketchup"> ketchup
+            </label>
+            <label>
+                <input type="checkbox" [formControl]="mustard"> mustard
+            </label>
+            <label>
+                <input type="checkbox" [formControl]="ThousandIslands"> Thousand Islands
+            </label>
+            <label>
+                <input type="checkbox" [formControl]="sweetChilli"> sweet chilli
+            </label>
+            
+        </div>
+    </form>
+</div>
+
+<div id="divExtras" >
+    <h2>
+        type of Extras
+    </h2>
+    <form [formGroup]="form2" >
+        <div >
+            <label> choose type of Extras : </label>
+            <label>
+                <input type="radio"  formControlName="extras" value="fries"> Fries
+            </label>
+            <label>
+                <input type="radio" formControlName="extras" value="Onion rings"> Onion rings
+            </label>
+            <label>
+                <input type="radio" formControlName="extras" value="salad"> salad
+            </label>
+            <label>
+                <input type="radio" formControlName="extras" value="without extras"> without
+            </label>
+        </div>
+    </form>
+</div>
+
+<button (click)="yourchoose()" [routerLink]="['/accepted'] " >Send</button>
